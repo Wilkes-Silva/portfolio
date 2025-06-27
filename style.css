@@ -1,0 +1,92 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #111;
+  --link-bg: #f0f0f0;
+  --link-hover: #ddd;
+}
+
+body.dark {
+  --bg-color: #111;
+  --text-color: #fff;
+  --link-bg: #222;
+  --link-hover: #333;
+}
+
+body {
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(145deg, rgb(88, 88, 92), rgb(27, 26, 31));
+    justify-items: center;
+    align-content: center;
+    gap: 0;
+    
+    & h1 {
+        color: white;
+        font-size: 4em;
+        margin: 0;
+    }
+    & p  {
+        color: white;
+        font-size: 2.5em;
+        margin: 0;
+    }
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  padding: 1rem;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 1rem 0;
+  border: 3px solid var(--text-color);
+}
+
+.bio {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.links a {
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.links a:hover {
+  background: var(--link-hover);
+}
+
+.socials {
+  margin-top: 1.5rem;
+}
+
+.socials a {
+  margin: 0 0.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #007aff;
+}
+
