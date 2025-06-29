@@ -104,6 +104,10 @@ section {
     text-decoration: none;
     font-weight: 600;
     transition: .5s;
+
+    @media (max-width:768px) {
+        padding: 10px 14px;
+    }
 }
 
 .btn-group .btn:hover {
@@ -238,7 +242,6 @@ section {
     font-weight: 600;
 }
 
-/* SEÇÃO CONTATO */
 .contact {
     background: var(--second-bg-color);
     text-align: center;
@@ -294,7 +297,7 @@ section {
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .header {
-        padding: 20px 5%;
+        padding: 15px 5%;
     }
     .navbar {
         display: none; /* Escondido por padrão em mobile, JS irá controlar */
