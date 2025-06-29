@@ -1,4 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Menu mobile
+    const menuBtn = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-mobile');
+    
+    // Função para atualizar o ícone do menu
+    function updateMenuIcon(isActive) {
+        const icon = menuBtn.querySelector('i');
+        if (isActive) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    }
+    
+    // Toggle menu ao clicar no botão
+    menuBtn.addEventListener('click', function() {
+        navList.classList.toggle('active');
+        updateMenuIcon(navList.classList.contains('active'));
+    });
+    
+    // Fecha ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (!navList.contains(e.target) && !menuBtn.contains(e.target)) {
+            navList.classList.remove('active');
+            updateMenuIcon(false);
+        }
+    });
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {

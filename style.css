@@ -38,7 +38,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 999;
     transition: .3s;
 }
 
@@ -51,6 +51,7 @@ body {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
+    z-index: 999;
 }
 
 .navbar a {
@@ -65,6 +66,64 @@ body {
 .navbar a:hover, .navbar a.active {
     color: var(--main-color);
 }
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 999;
+}
+
+.nav-mobile {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    background: #d102fbfb;
+    padding-top: 80px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 998;
+}
+
+.nav-mobile.active {
+    left: 0;
+}
+
+.nav-mobile ul {
+    font-weight: 500;
+    margin-left: 35px;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-mobile li {
+    margin: 20px 0;
+}
+.nav-mobile i {
+    margin-right: 12px;
+}
+
+.nav-mobile a {
+    transition-duration: .2s;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 7px;
+    padding: 7px;
+}
+.nav-mobile a:hover {
+    color: #280130;
+}
+
 
 section {
     min-height: 80vh;
@@ -301,6 +360,9 @@ section {
     }
     .navbar {
         display: none; /* Escondido por padrão em mobile, JS irá controlar */
+    }
+    .menu-toggle {
+        display: block;
     }
     section {
         padding: 8rem 5% 2rem;
