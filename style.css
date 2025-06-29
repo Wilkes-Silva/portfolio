@@ -22,6 +22,10 @@ body {
     text-align: center;
     font-size: 2.8rem;
     margin-bottom: 2rem;
+
+    @media (max-width: 767px) {
+        font-size: 2.3rem;
+    }
 }
 
 .heading span {
@@ -86,9 +90,8 @@ body {
     top: 0;
     left: -250px; 
     width: 250px;
-    background: #d102fbfb;
+    background: #d102fb;
     padding-top: 80px;
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
     transition: left 0.3s ease;
     z-index: 998;
 }
@@ -106,10 +109,10 @@ body {
 }
 
 .nav-mobile li {
-    margin: 20px 0;
+    margin: 15px 0;
 }
 .nav-mobile i {
-    margin-right: 12px;
+    margin-right: 10px;
 }
 
 .nav-mobile a {
@@ -139,12 +142,20 @@ section {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+
+    @media (max-width: 767px) {
+        font-size: 40px;
+    }
 }
 
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
     color: var(--main-color);
+
+    @media (max-width: 767px) {
+        font-size: 22px;
+    }
 }
 
 .home-content p {
@@ -158,14 +169,15 @@ section {
     background: var(--main-color);
     border-radius: 40px;
     font-size: 16px;
-    color: var(--bg-color);
+    color: white;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
     transition: .5s;
 
-    @media (max-width:768px) {
-        padding: 10px 14px;
+    @media (max-width:390px) {
+        font-size: 14px;
+        padding: 10px 17px;
     }
 }
 
@@ -204,6 +216,10 @@ section {
 
 .about-content h3 {
     font-size: 2rem;
+
+    @media (max-width: 767px) {
+        font-size: 1.5rem;
+    }
 }
 
 .about-content p {
@@ -211,19 +227,23 @@ section {
     margin: 1.5rem 0 2rem;
 }
 
+#skills-section {
+    min-height: 1vh;
+}
+
 .skills {
+    display: block;
     margin-top: 2rem;
 }
 
 .skill {
+    margin-top: 10px;
     cursor: pointer;
     display: block;
     background: var(--bg-color);
     color: var(--main-color);
     padding: 8px 15px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border: 1px solid var(--main-color);
     transition: .3s;
 }
@@ -304,6 +324,7 @@ section {
 .contact {
     background: var(--second-bg-color);
     text-align: center;
+
 }
 
 .contact-content p {
@@ -313,11 +334,10 @@ section {
 }
 
 .contact-content a {
-    color: var(--main-color);
+    color: var(--bg-color);
     text-decoration: none;
 }
 
-/* RODAPÉ */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -350,6 +370,7 @@ section {
 }
 
 .copyright {
+    text-align: center;
     font-size: 0.9rem;
 }
 
