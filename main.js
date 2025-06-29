@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // EFEITO DO CABEÇALHO AO ROLAR A PÁGINA
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -10,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // MARCAR LINK ATIVO NA NAVEGAÇÃO
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.navbar a');
 
