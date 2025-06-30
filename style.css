@@ -175,6 +175,10 @@ section {
     font-weight: 600;
     transition: .5s;
 
+    @media (max-width:768px) {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
     @media (max-width:390px) {
         font-size: 14px;
         padding: 10px 14px;
