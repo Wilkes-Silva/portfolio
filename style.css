@@ -179,10 +179,7 @@ section {
         font-size: 14px;
         padding: 10px 14px;
     }
-    @media (max-width:390px) {
-        font-size: 14px;
-        padding: 10px 14px;
-    }
+    
 }
 
 .btn-group .btn:hover {
